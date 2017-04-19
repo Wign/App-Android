@@ -3,6 +3,7 @@ package wign.android.wignivs.dk.wign;
 import java.util.Date;
 
 import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 
 /**
  * Created by Troels on 29/03/2017.
@@ -10,6 +11,7 @@ import io.realm.RealmObject;
 
 public class Video extends RealmObject {
     private Word word;
+    @PrimaryKey
     private int id;
     private String desc;
     private String thumb_url;

@@ -1,17 +1,15 @@
 package wign.android.wignivs.dk.wign;
 
-import android.support.v7.widget.RecyclerView;
-
 import io.realm.RealmList;
 import io.realm.RealmObject;
-import io.realm.annotations.Index;
+import io.realm.annotations.PrimaryKey;
 
 /**
  * Created by Troels on 29/03/2017.
  */
 
 public class Word extends RealmObject {
-    @Index
+    @PrimaryKey
     private String word;
     private RealmList<Video> videos;
 

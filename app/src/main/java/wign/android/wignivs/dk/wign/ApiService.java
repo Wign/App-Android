@@ -18,4 +18,9 @@ public interface ApiService {
     Call<List<Word>> words(
             @Path("words") String words
     );
+
+    @GET("/video/{word}")
+    Call<List<Video>> getTheVideos(
+            @Path("word") String word
+    );
 }
