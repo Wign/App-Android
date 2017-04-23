@@ -1,5 +1,8 @@
 package wign.android.wignivs.dk.wign;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -12,7 +15,11 @@ public class ServiceGenerator {
 
     private static final String WIGN_API_URL = "http://api.wign.dk/";
 
-    private static Retrofit.Builder builder = new Retrofit.Builder().baseUrl(WIGN_API_URL).addConverterFactory(GsonConverterFactory.create());
+    private static Gson gson = new GsonBuilder()
+            .setDateFormat("yyyy-MM-dd HH:mm:ss")
+            .create();
+
+    private static Retrofit.Builder builder = new Retrofit.Builder().baseUrl(WIGN_API_URL).addConverterFactory(GsonConverterFactory.create(gson));
 
     private static Retrofit retrofit = builder.build();
 

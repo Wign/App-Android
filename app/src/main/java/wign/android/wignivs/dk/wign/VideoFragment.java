@@ -2,6 +2,9 @@ package wign.android.wignivs.dk.wign;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 public class VideoFragment extends Fragment {
 
@@ -12,14 +15,14 @@ public class VideoFragment extends Fragment {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View v = inflater.inflate(R.layout.fragment_video, container, false);
 
-        if(!getArguments().isEmpty()) {
-            theQuery = getArguments().getString("Query");
-        }
+        return v;
+    }
 
-        ApiService ApiService = ServiceGenerator.createService(ApiService.class);
-        new getVideosAsyncTask(ApiService).execute(theQuery);
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
     }
 }

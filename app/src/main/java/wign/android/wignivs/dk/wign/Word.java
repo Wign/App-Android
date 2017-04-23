@@ -1,5 +1,7 @@
 package wign.android.wignivs.dk.wign;
 
+import java.util.List;
+
 import io.realm.RealmList;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
@@ -26,6 +28,10 @@ public class Word extends RealmObject {
 
     public void setWord(String word) {
         this.word = word;
+    }
+
+    public RealmList<Video> getList() {
+        return videos;
     }
 
     @Override

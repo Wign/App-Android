@@ -7,6 +7,7 @@
     android:fitsSystemWindows="true"
     tools:context="wign.android.wignivs.dk.wign.MainActivity">
 
+    <!--
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,16 +21,12 @@
             app:popupTheme="@style/AppTheme.PopupOverlay"/>
 
     </android.support.design.widget.AppBarLayout>
+    -->
 
     <fragment
         android:id="@+id/main_fragment"
         android:name="wign.android.wignivs.dk.wign.MainActivityFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
-    <FrameLayout
-        android:id="@+id/video_list_container"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"/>
 
 </android.support.design.widget.CoordinatorLayout>

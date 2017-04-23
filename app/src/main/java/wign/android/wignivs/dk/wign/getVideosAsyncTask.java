@@ -27,14 +27,18 @@ public class getVideosAsyncTask extends AsyncTask<String, Void, Void> {
         try {
             realm = Realm.getDefaultInstance();
             for (String query : queries) {
-                Call<List<Video>> call = apiService.getTheVideos(query); // Defining the call to fetch all words from Wign API
-                Response<List<Video>> response = call.execute(); // Sync download
 
-                final List<Video> videoList = response.body();
+                final Word word = realm.where(Word.class).equalTo("word", query).findFirst();
+                if(word == null) { return null; }
+
+                Call<List<Video>> call = apiService.getTheVideos(query); // Defining the call to fetch all videos from Wign API
+                Response<List<Video>> response = call.execute(); // Sync download
+                final List<Video> videoList = response.body(); // Get the list of videos
+
                 realm.executeTransaction(new Realm.Transaction() {
                     @Override
                     public void execute(Realm realm) {
-                        realm.insertOrUpdate(videoList);
+                        word.getList().addAll(videoList);
                         System.out.println("Video API successful. Data stored in realm.");
                     }
                 });

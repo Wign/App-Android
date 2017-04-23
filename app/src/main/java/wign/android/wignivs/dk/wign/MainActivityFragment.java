@@ -4,12 +4,12 @@ import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.EditText;
 
 import io.realm.Realm;
 
@@ -19,8 +19,8 @@ import io.realm.Realm;
 public class MainActivityFragment extends Fragment {
     private Realm realm;
     private Button btn;
-    private RecyclerView recyclerView;
-    private AutoCompleteTextView actv;
+    //private RecyclerView recyclerView;
+    private EditText actv;
 
     public MainActivityFragment() {
     }
@@ -45,10 +45,10 @@ public class MainActivityFragment extends Fragment {
             }
         });
 
-        recyclerView = (RecyclerView) v.findViewById(R.id.main_video_recycler);
+        //recyclerView = (RecyclerView) v.findViewById(R.id.main_video_recycler);
         //recyclerView.setAdapter(); // @Todo: Adding a adapter to the RecyclerView
 
-        actv = (AutoCompleteTextView) v.findViewById(R.id.search_sign);
+        actv = (EditText) v.findViewById(R.id.search_sign);
         // @Todo: Autocompleting the input area - Last task!
 
         return v;
