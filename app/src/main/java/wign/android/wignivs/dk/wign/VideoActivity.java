@@ -7,13 +7,16 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import wign.android.wignivs.dk.wign.api.*;
+import wign.android.wignivs.dk.wign.gotchas.getVideosAsyncTask;
+
 public class VideoActivity extends AppCompatActivity {
     private static final String QUERY_ID = "Query";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_video);
+        setContentView(R.layout.activity_fragment);
 
         Bundle bundle = getIntent().getExtras();
         String query = bundle.getString(QUERY_ID);
@@ -24,12 +27,12 @@ public class VideoActivity extends AppCompatActivity {
 
         FragmentManager fm = getSupportFragmentManager();
 
-        Fragment videoFragment = fm.findFragmentById(R.id.video_fragment);
+        Fragment videoFragment = fm.findFragmentById(R.id.fragment_container);
         if(videoFragment == null) {
-            videoFragment = new MainActivityFragment();
-            videoFragment.setArguments(bundle);
+            videoFragment = new VideoFragment();
+            videoFragment.setArguments(bundle); // Sending the query to the fragment as well
             fm.beginTransaction()
-                    .add(R.id.video_fragment, videoFragment)
+                    .add(R.id.fragment_container, videoFragment)
                     .commit();
         }
     }

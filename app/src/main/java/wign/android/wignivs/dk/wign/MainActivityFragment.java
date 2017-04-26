@@ -3,11 +3,9 @@ package wign.android.wignivs.dk.wign;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -18,6 +16,7 @@ import io.realm.Realm;
  */
 public class MainActivityFragment extends Fragment {
     private Realm realm;
+
     private Button btn;
     //private RecyclerView recyclerView;
     private EditText actv;
@@ -28,12 +27,8 @@ public class MainActivityFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         realm = Realm.getDefaultInstance();
-        System.out.println("path: " + realm.getPath());
 
         View v = inflater.inflate(R.layout.fragment_main, container, false);
-
-        ApiService ApiService = ServiceGenerator.createService(ApiService.class);
-        new getAllWordsAsyncTask(ApiService).execute(); // Async get all the words from Wign and fill Realm DB
 
         btn = (Button) v.findViewById(R.id.btn_find_sign);
         btn.setOnClickListener(new View.OnClickListener() {

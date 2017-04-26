@@ -1,9 +1,8 @@
-package wign.android.wignivs.dk.wign;
-
-import java.util.List;
+package wign.android.wignivs.dk.wign.model;
 
 import io.realm.RealmList;
 import io.realm.RealmObject;
+import io.realm.RealmResults;
 import io.realm.annotations.PrimaryKey;
 
 /**

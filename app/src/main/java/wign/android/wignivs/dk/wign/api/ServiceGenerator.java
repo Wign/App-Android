@@ -1,4 +1,4 @@
-package wign.android.wignivs.dk.wign;
+package wign.android.wignivs.dk.wign.api;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

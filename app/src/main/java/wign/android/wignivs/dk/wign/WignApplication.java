@@ -2,6 +2,7 @@ package wign.android.wignivs.dk.wign;
 
 import android.app.Application;
 
+import im.ene.toro.Toro;
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
 import io.realm.exceptions.RealmMigrationNeededException;
@@ -14,10 +15,13 @@ public class WignApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
         Realm.init(this);
         RealmConfiguration realmConfiguration = new RealmConfiguration.Builder().build();
         buildDatabase(realmConfiguration); // Resetting the database
         Realm.setDefaultConfiguration(realmConfiguration);
+
+        Toro.init(this);
     }
 
     public Realm buildDatabase(RealmConfiguration realmConfiguration){

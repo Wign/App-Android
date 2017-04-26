@@ -1,10 +1,12 @@
-package wign.android.wignivs.dk.wign;
+package wign.android.wignivs.dk.wign.api;
 
 import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
+import wign.android.wignivs.dk.wign.model.Video;
+import wign.android.wignivs.dk.wign.model.Word;
 
 /**
  * Created by Troels on 05/04/2017.
