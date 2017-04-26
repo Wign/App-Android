@@ -7,4 +7,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="sample">Description comes here</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="btn_add_video">Add more video</string>
+    <string name="empty_video">Sorry! We don\'t have any signs for the word %1$s. Try to find another sign.</string>
+    <string name="Welcome_msg">Find your sign here!</string>
 </resources>

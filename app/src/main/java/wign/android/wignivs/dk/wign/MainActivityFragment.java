@@ -18,7 +18,6 @@ public class MainActivityFragment extends Fragment {
     private Realm realm;
 
     private Button btn;
-    //private RecyclerView recyclerView;
     private EditText actv;
 
     public MainActivityFragment() {
@@ -40,11 +39,7 @@ public class MainActivityFragment extends Fragment {
             }
         });
 
-        //recyclerView = (RecyclerView) v.findViewById(R.id.main_video_recycler);
-        //recyclerView.setAdapter(); // @Todo: Adding a adapter to the RecyclerView
-
         actv = (EditText) v.findViewById(R.id.search_sign);
-        // @Todo: Autocompleting the input area - Last task!
 
         return v;
     }

@@ -6,13 +6,15 @@ import java.util.Date;
 
 import io.realm.RealmObject;
 import io.realm.annotations.Index;
+import io.realm.annotations.PrimaryKey;
 
 /**
  * Created by Troels on 29/03/2017.
  */
 
 public class Video extends RealmObject {
-    private int ID;
+    @PrimaryKey
+    private int id;
     private String videoID;
     private String videoURI;
     private String description;
@@ -81,11 +83,11 @@ public class Video extends RealmObject {
     }
 
     public int getID() {
-        return ID;
+        return id;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setID(int id) {
+        this.id = id;
     }
 
     private String exchangeformat(String source, String to) {

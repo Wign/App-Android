@@ -7,33 +7,54 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import io.realm.Case;
+import io.realm.Realm;
 import wign.android.wignivs.dk.wign.api.*;
 import wign.android.wignivs.dk.wign.gotchas.getVideosAsyncTask;
+import wign.android.wignivs.dk.wign.model.Word;
 
 public class VideoActivity extends AppCompatActivity {
-    private static final String QUERY_ID = "Query";
+    public static final String QUERY_ID = "Query";
+    Realm realm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        realm = Realm.getDefaultInstance();
+
+
         setContentView(R.layout.activity_fragment);
 
         Bundle bundle = getIntent().getExtras();
-        String query = bundle.getString(QUERY_ID);
-        if(query != null && !query.isEmpty()) {
+        String queryWord = bundle.getString(QUERY_ID);
+        Word word = realm.where(Word.class).equalTo("word", queryWord, Case.INSENSITIVE).findFirst();
+
+        if(word != null) {
+            setTitle(word.getWord()); // Set the title to the word
+
             ApiService ApiService = ServiceGenerator.createService(ApiService.class);
-            new getVideosAsyncTask(ApiService).execute(query);
+            new getVideosAsyncTask(ApiService).execute(word.getWord());
+        } else {
+            setTitle("Word \"" + queryWord + "\" not found"); // Set the title to the word
         }
 
         FragmentManager fm = getSupportFragmentManager();
 
         Fragment videoFragment = fm.findFragmentById(R.id.fragment_container);
         if(videoFragment == null) {
-            videoFragment = new VideoFragment();
-            videoFragment.setArguments(bundle); // Sending the query to the fragment as well
-            fm.beginTransaction()
-                    .add(R.id.fragment_container, videoFragment)
-                    .commit();
+            if (word != null) {
+                videoFragment = new VideoFragment();
+                videoFragment.setArguments(bundle); // Sending the query to the fragment as well
+                fm.beginTransaction()
+                        .add(R.id.fragment_container, videoFragment)
+                        .commit();
+            }
+            else {
+                videoFragment = new EmptyVideoFragment();
+                fm.beginTransaction()
+                        .add(R.id.fragment_container, videoFragment)
+                        .commit();
+            }
         }
     }
 

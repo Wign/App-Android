@@ -1,12 +1,14 @@
 package wign.android.wignivs.dk.wign;
 
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import im.ene.toro.Toro;
 import io.realm.Realm;
@@ -21,6 +23,7 @@ public class VideoFragment extends Fragment {
 
     private RecyclerView recyclerView;
     private VideoRecyclerViewAdapter adapter;
+    private Button btn_add;
 
     private String theQuery;
     private Word theWord;
@@ -33,7 +36,7 @@ public class VideoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         realm = Realm.getDefaultInstance();
 
-        theQuery = getActivity().getIntent().getStringExtra("Query");
+        theQuery = getActivity().getIntent().getStringExtra(VideoActivity.QUERY_ID);
         theWord = realm.where(Word.class).equalTo("word", theQuery).findFirst();
 
         View v = inflater.inflate(R.layout.fragment_video, container, false);
@@ -43,6 +46,14 @@ public class VideoFragment extends Fragment {
             setUpRecyclerView();
             Toro.register(recyclerView);
         }
+
+        btn_add = (Button) v.findViewById(R.id.btn_add_video);
+        btn_add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar.make(v, "You pressed it! This feature will come in the near future :-)", Snackbar.LENGTH_LONG).show();
+            }
+        });
 
         return v;
     }
