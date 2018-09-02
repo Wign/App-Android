@@ -4,8 +4,8 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
-
-import wign.android.wignivs.dk.wign.api.*;
+import wign.android.wignivs.dk.wign.api.ApiService;
+import wign.android.wignivs.dk.wign.api.ServiceGenerator;
 import wign.android.wignivs.dk.wign.gotchas.getAllWordsAsyncTask;
 
 public class MainActivity extends AppCompatActivity {

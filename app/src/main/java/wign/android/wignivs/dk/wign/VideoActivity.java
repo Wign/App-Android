@@ -9,7 +9,8 @@ import android.os.Bundle;
 
 import io.realm.Case;
 import io.realm.Realm;
-import wign.android.wignivs.dk.wign.api.*;
+import wign.android.wignivs.dk.wign.api.ApiService;
+import wign.android.wignivs.dk.wign.api.ServiceGenerator;
 import wign.android.wignivs.dk.wign.gotchas.getVideosAsyncTask;
 import wign.android.wignivs.dk.wign.model.Word;
 

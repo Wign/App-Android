@@ -8,9 +8,9 @@ import java.util.List;
 import io.realm.Realm;
 import retrofit2.Call;
 import retrofit2.Response;
-import wign.android.wignivs.dk.wign.api.ApiService;
 import wign.android.wignivs.dk.wign.model.Video;
 import wign.android.wignivs.dk.wign.model.Word;
+import wign.android.wignivs.dk.wign.api.ApiService;
 
 /**
  * Created by Troels on 11/04/2017.
