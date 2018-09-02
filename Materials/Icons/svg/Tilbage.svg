@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="21px" viewBox="0 0 12 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>svg/Tilbage</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Login-page" transform="translate(-16.000000, -83.000000)" fill="#000000" fill-rule="nonzero">
+            <path d="M19.6213203,93.5 L27.5606602,85.5606602 C28.1464466,84.9748737 28.1464466,84.0251263 27.5606602,83.4393398 C26.9748737,82.8535534 26.0251263,82.8535534 25.4393398,83.4393398 L16.4393398,92.4393398 C15.8535534,93.0251263 15.8535534,93.9748737 16.4393398,94.5606602 L25.4393398,103.56066 C26.0251263,104.146447 26.9748737,104.146447 27.5606602,103.56066 C28.1464466,102.974874 28.1464466,102.025126 27.5606602,101.43934 L19.6213203,93.5 Z" id="Tilbage"></path>
+        </g>
+    </g>
+</svg>
