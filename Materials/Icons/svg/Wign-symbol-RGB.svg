@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="342px" height="392px" viewBox="0 0 342 392" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>svg/Wign-symbol-RGB</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M35.592,209.458 L0,99.759 C33.643,40.361 97.372,0.249 170.511,0.249 C239.124,0.249 299.46,35.555 334.444,88.965 L274.987,88.965 L256.112,149.5 L237.237,88.965 L176.364,88.965 L135.189,212.555 L114.757,147.022 L55.062,147.022 L35.592,209.458 Z" id="path-1"></path>
+        <linearGradient x1="49.0358337%" y1="0.152903247%" x2="49.0358337%" y2="99.7876202%" id="linearGradient-3">
+            <stop stop-color="#81C5A3" offset="0%"></stop>
+            <stop stop-color="#5EBDB6" offset="100%"></stop>
+        </linearGradient>
+        <path d="M299.428,3.791 L279.959,66.227 L220.263,66.227 L199.831,0.694 L158.656,124.284 L97.783,124.284 L78.908,63.749 L60.032,124.284 L0.576,124.284 C35.56,177.693 95.895,213 164.511,213 C237.648,213 301.376,172.888 335.02,113.49 L299.428,3.791" id="path-4"></path>
+        <linearGradient x1="50%" y1="-84.2397294%" x2="50%" y2="99.6081128%" id="linearGradient-6">
+            <stop stop-color="#81C5A3" offset="0%"></stop>
+            <stop stop-color="#5EBDB6" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Wign-symbol-RGB" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-3">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Clip-2"></g>
+            <polygon id="Fill-1" fill="url(#linearGradient-3)" mask="url(#mask-2)" points="0 392 341.02 392 341.02 0.249 0 0.249"></polygon>
+        </g>
+        <g id="Group-6" transform="translate(6.000000, 179.000000)">
+            <mask id="mask-5" fill="white">
+                <use xlink:href="#path-4"></use>
+            </mask>
+            <g id="Clip-5"></g>
+            <path d="M299.428,3.791 L279.959,66.227 L220.263,66.227 L199.831,0.694 L158.656,124.284 L97.783,124.284 L78.908,63.749 L60.032,124.284 L0.576,124.284 C35.56,177.693 95.895,213 164.511,213 C237.648,213 301.376,172.888 335.02,113.49 L299.428,3.791" id="Fill-4" fill="url(#linearGradient-6)" mask="url(#mask-5)"></path>
+        </g>
+    </g>
+</svg>

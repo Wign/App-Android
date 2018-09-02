@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="24px" viewBox="0 0 23 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Upload-black</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+        <g id="Menu-bar-søg" transform="translate(-177.000000, -7.000000)" stroke="#000000" stroke-width="2">
+            <g id="Menu">
+                <g id="Upload" transform="translate(160.000000, 8.000000)">
+                    <g id="Upload-black" transform="translate(18.000000, 0.000000)">
+                        <path d="M21,3.9650625 L21,18.4025625 C21,19.8522187 19.8246563,21.0275625 18.375,21.0275625 L2.625,21.0275625 C1.17534375,21.0275625 0,19.8522187 0,18.4025625 L0,3.9650625" id="Stroke-1"></path>
+                        <path d="M10.5,16.40625 L10.5,0.65625" id="Stroke-3"></path>
+                        <path d="M16.0685438,5.29679063 L10.9642313,0.192478125 C10.7076375,-0.064115625 10.2922313,-0.064115625 10.0362938,0.192478125 L4.931325,5.29679063" id="Stroke-5"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
